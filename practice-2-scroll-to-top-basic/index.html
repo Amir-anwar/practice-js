@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scroll to top</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .solid-color {
+      height: 100vh;
+      background-color: rgb(34, 177, 105);
+    }
+
+    .solid-color:nth-child(2) {
+      background-color: rgb(206, 203, 59);
+    }
+
+    .solid-color:nth-child(3) {
+      background-color: rgb(30, 125, 202);
+    }
+
+    .solid-color:nth-child(4) {
+      background-color: rgb(201, 57, 57);
+    }
+
+    .btn {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background-color: #FFF;
+      position: fixed;
+      bottom: 3rem;
+      right: 3rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 2rem;
+      box-shadow: -2px 1px 6px -1px rgba(255, 255, 255, 0.66);
+      visibility: hidden;
+      opacity: 0;
+      transition: all .3s ease-out .2s;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <button class="btn">
+    ⬆️
+  </button>
+
+  <div class="solid-color"></div>
+  <div class="solid-color"></div>
+  <div class="solid-color"></div>
+  <div class="solid-color"></div>
+  <div class="solid-color"></div>
+  
+
+  <script src="main.js"></script>
+</body>
+</html>
