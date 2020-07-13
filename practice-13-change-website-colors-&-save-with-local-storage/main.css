@@ -1,0 +1,97 @@
+ul {
+  padding: 0;
+  margin: 0 auto 20px;
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+ul li {
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #2e86de;
+  cursor: pointer;
+}
+
+ul li:nth-of-type(2) {
+  background-color: #222f3e;
+}
+
+ul li:nth-of-type(3) {
+  background-color: #f368e0;
+}
+
+ul li:nth-of-type(4) {
+  background-color: #10ac84;
+}
+
+.default div {
+  padding: 20px;
+  width: 70%;
+  margin: 10px auto;
+  background-color: #fff;
+  color: #000;
+  font-size: 30px;
+}
+
+.default p {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+body.Dark {
+  background: #212121;
+}
+
+.Dark div {
+  padding: 20px;
+  width: 70%;
+  margin: 10px auto;
+  background-color: #222f3e;
+  color: #fff;
+  font-size: 30px;
+}
+
+.Dark p {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+body.pink,
+body.green {
+  background: #fff;
+}
+
+.pink div {
+  padding: 20px;
+  width: 70%;
+  margin: 10px auto;
+  background-color: #f368e0;
+  color: #fff;
+  font-size: 30px;
+}
+
+.pink p {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #f368e0;
+}
+
+.green div {
+  padding: 20px;
+  width: 70%;
+  margin: 10px auto;
+  background-color: #10ac84;
+  color: #fff;
+  font-size: 30px;
+}
+
+.green p {
+  color: #10ac84;
+  font-size: 30px;
+  text-transform: uppercase;
+}
