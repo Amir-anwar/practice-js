@@ -9,7 +9,7 @@ html {
   margin: 0;
   padding: 0;
   line-height: 0;
-  user-select: none;
+  pointer-events: none;
 }
 
 img {
@@ -18,6 +18,4 @@ img {
   object-fit: cover;
   clip-path: circle(0px at 50% 50%);
   transition: all .1s ease-out;
-  user-select: none;
-  -webkit-user-drag: none;
 }
