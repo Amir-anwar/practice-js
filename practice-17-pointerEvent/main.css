@@ -19,8 +19,8 @@ img {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-clip-path: circle(0edot at 50% 50%);
-          clip-path: circle(0edot at 50% 50%);
+  -webkit-clip-path: circle(0 at 50% 50%);
+          clip-path: circle(0 at 50% 50%);
   -webkit-transition: all .1s ease-out;
   transition: all .1s ease-out;
 }
