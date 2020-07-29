@@ -1,0 +1,63 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  pointer-events: none;
+  font-family: Tajawal;
+}
+
+img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  background-color: #fff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.text-1 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #680f0f;
+  font-size: 140px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  mix-blend-mode: overlay;
+}
+
+.text-1:nth-of-type(2) {
+  top: 120%;
+  mix-blend-mode: luminosity;
+  color: #fff;
+}
+
+.text-1:nth-of-type(3) {
+  top: 220%;
+  mix-blend-mode: exclusion;
+  color: #354b68;
+}
+/*# sourceMappingURL=main.css.map */

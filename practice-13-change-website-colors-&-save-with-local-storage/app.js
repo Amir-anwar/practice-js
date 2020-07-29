@@ -1,6 +1,5 @@
 document.body.classList.add(localStorage.getItem('theme') || 'Default');
 
-
 const lis = document.querySelectorAll('ul li');
 const classList = [];
 

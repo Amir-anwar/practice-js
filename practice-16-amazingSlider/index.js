@@ -5,26 +5,11 @@ const prevBtn = document.querySelector('.previous');
 const slidesCount = slides.length;
 let currentSlide = 0;
 
-check();
-
-// Click Handlers
-nextBtn.onclick = () => {
-  if (currentSlide < slidesCount -1) {
-    currentSlide++;
-    check();
-  } else {
-    return false;
-  }
-};
-prevBtn.onclick = () => {
-  if (currentSlide > 0) {
-    currentSlide--;
-    check();
-  } else {
-    return false;
-  }
-};
-
+function removeActive() {
+  slides.forEach((slide) => {
+    slide.classList.remove('active');
+  });
+}
 
 function check() {
   // number
@@ -35,17 +20,37 @@ function check() {
 
   slides[currentSlide].classList.add('active');
 
-  (currentSlide == 0) ?
-    prevBtn.classList.add('disabled') :
+  if (currentSlide === 0) {
+    prevBtn.classList.add('disabled');
+  } else {
     prevBtn.classList.remove('disabled');
-  (currentSlide == slidesCount - 1) ?
-    nextBtn.classList.add('disabled') :
-    nextBtn.classList.remove('disabled');
-};
+  }
 
-function removeActive() {
-  slides.forEach((slide) => {
-    slide.classList.remove('active');
-  });
+  if (currentSlide === slidesCount - 1) {
+    nextBtn.classList.add('disabled');
+  } else {
+    nextBtn.classList.remove('disabled');
+  }
 }
 
+check();
+
+// Click Handlers
+nextBtn.onclick = () => {
+  if (currentSlide < slidesCount - 1) {
+    currentSlide += 1;
+    check();
+  } else {
+    return false;
+  }
+  return true;
+};
+prevBtn.onclick = () => {
+  if (currentSlide > 0) {
+    currentSlide -= 1;
+    check();
+  } else {
+    return false;
+  }
+  return true;
+};

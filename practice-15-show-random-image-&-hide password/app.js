@@ -1,15 +1,13 @@
-'use strict';
-
 const btn = document.querySelector('.btn');
 const input = document.querySelector('.input');
 
 btn.addEventListener('click', () => {
   if (btn.textContent === 'show password') {
     input.setAttribute('type', 'text');
-    return btn.textContent = 'hide password';
+    btn.textContent = 'hide password';
   }
   input.setAttribute('type', 'password');
-  return btn.textContent = 'show password';
+  btn.textContent = 'show password';
 });
 
 const images = [

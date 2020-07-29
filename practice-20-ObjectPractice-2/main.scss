@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.canvas {
+  height: 100vh;
+  overflow: hidden;
+  background: url(./grid.jpg);
+  display: grid;
+  place-items: center;
+
+  .mario {
+    width: 150px;
+    position: relative;
+    top: 0;
+    left: 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
