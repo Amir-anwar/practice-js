@@ -44,22 +44,33 @@ const mario = {
   },
 };
 
-window.addEventListener('keydown', (e) => {
-  switch (e.key) {
-    case 'ArrowLeft':
-      mario.left();
-      break;
-    case 'ArrowRight':
-      mario.right();
-      break;
-    case 'ArrowUp':
-      mario.up();
-      break;
-    case 'ArrowDown':
-      mario.down();
-      break;
-    default:
-      mario.move();
+const keysPressed = {};
+
+document.addEventListener('keydown', (event) => {
+  keysPressed[event.key] = true;
+  if (keysPressed.ArrowUp && keysPressed.ArrowLeft) {
+    mario.up();
+    mario.left();
+  } else if (keysPressed.ArrowUp && keysPressed.ArrowRight) {
+    mario.up();
+    mario.right();
+  } else if (keysPressed.ArrowDown && keysPressed.ArrowLeft) {
+    mario.down();
+    mario.left();
+  } else if (keysPressed.ArrowDown && keysPressed.ArrowRight) {
+    mario.down();
+    mario.right();
+  } else if (keysPressed.ArrowUp) {
+    mario.up();
+  } else if (keysPressed.ArrowLeft) {
+    mario.left();
+  } else if (keysPressed.ArrowDown) {
+    mario.down();
+  } else if (keysPressed.ArrowRight) {
+    mario.right();
   }
-  console.log(e);
+});
+
+document.addEventListener('keyup', (event) => {
+  delete keysPressed[event.key];
 });

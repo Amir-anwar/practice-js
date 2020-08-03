@@ -19,6 +19,9 @@
   position: relative;
   top: 0;
   left: 0;
+  -webkit-transition: all 50ms ease-out;
+  transition: all 50ms ease-out;
+  will-change: scroll-position, top, left;
 }
 
 .canvas .mario img {
